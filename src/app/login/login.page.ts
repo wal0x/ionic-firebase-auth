@@ -13,8 +13,8 @@ import { Router } from "@angular/router";
   styleUrls: ["./login.page.scss"]
 })
 export class LoginPage implements OnInit {
-  email: string = "wa@wa.was";
-  password: string = "azerty";
+  email: string = "";
+  password: string = "";
   error: string;
   constructor(
     private authService: AuthService,
