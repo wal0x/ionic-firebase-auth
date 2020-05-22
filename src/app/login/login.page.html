@@ -7,12 +7,14 @@
 <ion-content style="text-align: center">
   <ion-item>
     <ion-label position="floating">E-mail</ion-label>
-    <ion-input type="email" inputmode="email"></ion-input>
+    <ion-input type="email" inputmode="email" [(ngModel)]="email"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Password</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
   </ion-item>
-  <ion-button expand="block" routerLink="/home">Login</ion-button>
-  <a routerLink="/signup">Not a member? Sign-up</a>
+  <ion-button expand="block" (click)="login()">Login</ion-button>
+  <p>
+    <ion-text color="danger"><i>{{error}}</i></ion-text>
+  </p>
 </ion-content>
