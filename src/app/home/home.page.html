@@ -11,5 +11,30 @@
   <p>
     You are logged in!
   </p>
+  <p>Here is your information :</p>
+  <table>
+    <tbody>
+      <tr>
+        <td>Display Name</td>
+        <td>:</td>
+        <td>{{user?.displayName}}</td>
+      </tr>
+      <tr>
+        <td>E-mail</td>
+        <td>:</td>
+        <td>{{user?.email}}</td>
+      </tr>
+      <tr>
+        <td>Created at</td>
+        <td>:</td>
+        <td>{{user?.metadata.creationTime}}</td>
+      </tr>
+      <tr>
+        <td>Last login</td>
+        <td>:</td>
+        <td>{{user?.metadata.lastSignInTime}}</td>
+      </tr>
+    </tbody>
+  </table>
   <ion-button color="danger" (click)="logout()">Log out</ion-button>
 </ion-content>
