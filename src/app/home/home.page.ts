@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { AuthService } from "../services/auth.service";
-import { take, first } from "rxjs/operators";
+import { first } from "rxjs/operators";
 
 @Component({
   selector: "app-home",

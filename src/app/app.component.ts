@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 import { Platform } from "@ionic/angular";
 import { SplashScreen } from "@ionic-native/splash-screen/ngx";
 import { AngularFireAuth } from "@angular/fire/auth";
+import { first } from "rxjs/operators";
 
 @Component({
   selector: "app-root",
@@ -33,7 +34,7 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.afAuth.user.subscribe(user => {
+      this.afAuth.user.pipe(first()).subscribe(user => {
         if (user) {
           this.ngZone.run(() => {
             this.router.navigate(["/home"]);

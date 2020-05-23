@@ -7,20 +7,23 @@
 <ion-content style="text-align: center">
   <ion-item>
     <ion-label position="floating">Name *</ion-label>
-    <ion-input inputmode="text"></ion-input>
+    <ion-input inputmode="text" [(ngModel)]="name"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">E-mail *</ion-label>
-    <ion-input type="email" inputmode="email"></ion-input>
+    <ion-input type="email" inputmode="email" [(ngModel)]="email"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Password *</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Confirm Password *</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input type="password" [(ngModel)]="cpassword"></ion-input>
   </ion-item>
-  <ion-button expand="block" routerLink="/home">Sign-up</ion-button>
+  <ion-button expand="block" (click)="signup()">Sign-up</ion-button>
   <a routerLink="/login">Already a member? Login</a>
+  <p>
+    <ion-text color="danger"><i>{{error}}</i></ion-text>
+  </p>
 </ion-content>
